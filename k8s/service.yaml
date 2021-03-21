@@ -1,11 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: okta-oidc
+  name: nginx
 spec:
   ports:
-    - port: 10003
+    - port: 80        # Port accessible inside cluster
+      targetPort: 80  # Port to forward to inside the pod
+      nodePort: 30002 # Port accessible outside cluster
   type: LoadBalancer
   selector:
-    name: okta-oidc
+    app: nginx
 

@@ -1,14 +1,12 @@
----
 apiVersion: "authentication.istio.io/v1alpha1"
 kind: "Policy"
 metadata:
   name: policy
 spec:
   targets:
-    - name: okta-oidc
+    - name: nginx
   origins:
     - jwt:
         issuer: https://dev-36178624.okta.com/oauth2/default
         jwksUri: https://dev-36178624.okta.com/oauth2/default/v1/keys
   principalBinding: USE_ORIGIN
----

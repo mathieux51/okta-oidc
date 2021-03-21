@@ -4,8 +4,8 @@ metadata:
   name: okta-oidc
 build:
   artifacts:
-  - image: okta-oidc
-    context: app
+  - image: okta-oidc # name of the image to be built.
+    context: app # directory containing the artifact's sources.
     docker:
       dockerfile: Dockerfile
 deploy:
