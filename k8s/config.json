@@ -1,0 +1,29 @@
+{
+  "listen_address": "127.0.0.1",
+  "listen_port": "10003",
+  "log_level": "trace",
+  "threads": 8,
+  "chains": [
+    {
+      "name": "demand-prediction-streamlit-idp-chain",
+      "filters": [
+        {
+          "oidc": {
+            "authorization_uri": "https://dev-36178624.okta.com/oauth2/default/v1/authorize",
+            "token_uri": "https://dev-36178624.okta.com/oauth2/default/v1/token",
+            "callback_uri": "https://demand-prediction-streamlit.tier-staging.io/oidc/callback",
+            "jwks": "{\"keys\":[{\"kty\":\"RSA\",\"alg\":\"RS256\",\"kid\":\"99CdQP52-WZ-LNsjRD0LMcA24gH66PfcC98eOqYBtMY\",\"use\":\"sig\",\"e\":\"AQAB\",\"n\":\"ykQBkdox2y0TgcwG9jGWDeAD2ZSCWB3mdsYR8r2GnoF5HKnYH_PYR-LitpwnWBIU3noNcg2FTw8OdMPyQLtudUtcdOXkJThQvUyXXNyNB5pJXQyVnIWKnLikeJpVIKXNwSaSZtrv4a3qQY1n83astvGi7S3pCpcrfKgeC3ZDNbgFm221c6yoaMEUm8H_vYaNVsWeDmZl3_niZGRBhIhnGULQBqPcxti8DPS4qznM_V-Vi9-TdyF_rLjY35-_suNzTxRAFUsXzy27OhWpUjQRAu93F999JpgMcl3x7i1qD_S8Eq4jLvLVnN1W6JKTk65BVAKbFtK3-Uvm5tOWXCJvxw\"}]}",
+            "client_id": "0oabbihtmNfFQLAZO5d6",
+            "client_secret": "ETHBG3OtcnI6h_pAdCetzQrVQWO5xjQJnqqC69gc",
+            "scopes": ["openid"],
+            "cookie_name_prefix": "demand-prediction-streamlit",
+            "id_token": {
+              "preamble": "Bearer",
+              "header": "Authorization"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

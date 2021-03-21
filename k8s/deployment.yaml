@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: okta-oidc
+  labels:
+    app: okta-oidc
+spec:
+  selector:
+    matchLabels:
+      app: okta-oidc
+  template:
+    metadata:
+      labels:
+        app: okta-oidc
+    spec:
+      containers:
+      - name: okta-oidc
+        image: okta-oidc
+        ports:
+        - containerPort: 10003
+          name: http

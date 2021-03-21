@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta13
+kind: Config
+metadata:
+  name: okta-oidc
+build:
+  artifacts:
+  - image: okta-oidc
+    context: app
+    docker:
+      dockerfile: Dockerfile
+deploy:
+  kustomize:
+    paths:
+    - k8s
