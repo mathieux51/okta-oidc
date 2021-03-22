@@ -3,11 +3,12 @@ kind: Service
 metadata:
   name: nginx
 spec:
-  ports:
-    - port: 80        # Port accessible inside cluster
-      targetPort: 80  # Port to forward to inside the pod
-      nodePort: 30002 # Port accessible outside cluster
-  type: LoadBalancer
   selector:
     app: nginx
+  ports:
+    - port: 80        # Port accessible inside cluster
+      name: http-80
+      # targetPort: 80  # Port to forward to inside the pod
+      # nodePort: 30002 # Port accessible outside cluster
+      # type: LoadBalancer
 

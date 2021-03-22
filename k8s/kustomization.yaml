@@ -6,3 +6,4 @@ resources:
   - service.yaml
   - policy.yaml
   - envoyfilter.yaml
+  - gateway.yaml
