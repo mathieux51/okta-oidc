@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: EnvoyFilter
 metadata:
-  name: okta-oidc-sidecar-token-service-filter
+  name: nginx-sidecar-token-service-filter
 spec:
   workloadSelector:
     labels:
